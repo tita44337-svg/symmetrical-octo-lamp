@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verifikasi Pengguna</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f2f3f7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  width: 320px;
+  padding: 20px;
+  border-radius: 14px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.slider {
+  margin-top: 20px;
+}
+
+input[type=range] {
+  width: 100%;
+}
+
+button {
+  margin-top: 15px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #dfe4ea;
+  color: #555;
+  font-size: 16px;
+}
+
+button.active {
+  background: #2d98da;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<div class="card">
+  <h3>Verifikasi Pengguna</h3>
+  <p>Geser slider ke kanan untuk melanjutkan.</p>
+
+  <div class="slider">
+    <input type="range" min="0" max="100" id="slide">
+  </div>
+
+  <button id="btn">Lanjutkan</button>
+</div>
+
+<script>
+const slide = document.getElementById("slide");
+const btn = document.getElementById("btn");
+
+slide.oninput = () => {
+  if (slide.value >= 95) {
+    btn.classList.add("active");
+    btn.onclick = () => {
+      window.location.href = "https://www.capcut.com/tv2/ZS5FSqKsK/";
+    }
+  }
+};
+</script>
+
+</body>
+</html>
